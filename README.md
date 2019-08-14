@@ -1,6 +1,6 @@
-# 👷 `worker-template` Hello World
+# 👷 `worker-template` Country Code
 
-A template for kick starting a Cloudflare worker project.
+A template for redirecting by country code in [Cloudflare Workers](https://workers.cloudflare.com).
 
 [`index.js`](https://github.com/cloudflare/worker-template/blob/master/index.js) is the content of the Workers script.
 
@@ -9,7 +9,7 @@ A template for kick starting a Cloudflare worker project.
 To generate using [wrangler](https://github.com/cloudflare/wrangler)
 
 ```
-wrangler generate projectname https://github.com/cloudflare/worker-template
+wrangler generate country-code https://github.com/conzorkingkong/country-code
 ```
 
 #### Serverless
