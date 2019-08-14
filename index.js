@@ -4,11 +4,11 @@
  * @param {string} strategy
  */
 function redirect(request, strategy) {
-  const country = request.headers.get("cf-ipcountry")
+  const country = request.headers.get('cf-ipcountry')
   const url = new URL(request.url)
-  if (strategy === "subdomain") {
+  if (strategy === 'subdomain') {
     url.hostname = `${country}.${url.hostname}`
-  } else if (strategy === "path") {
+  } else if (strategy === 'path') {
     url.pathname = `${country}${url.pathname}`
   }
   return Response.redirect(url, 302)
@@ -19,7 +19,7 @@ function redirect(request, strategy) {
  * @param {Request} request
  */
 async function handleRequest(request) {
-  return redirect(request, "subdomain")
+  return redirect(request, 'subdomain')
 }
 
 addEventListener('fetch', event => {
